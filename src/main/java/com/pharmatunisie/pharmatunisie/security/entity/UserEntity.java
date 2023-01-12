@@ -43,14 +43,8 @@ public class UserEntity {
 	@Column(name = "phone")
 	private String phone;
 	
-	@Column(name = "fixe")
-	private String fixe;
-
 	@Column(name = "address", length = 200)
 	private String address;
-
-	@Column(name = "have_avatar", columnDefinition = "tinyint(1) default 0")
-	private boolean haveAvatar;
 
 	@Column(name="email",unique = true, nullable = true)
 	private String email;
@@ -62,8 +56,6 @@ public class UserEntity {
 	@Column(name="raw_password")
 	private String rawPassword;
 
-	@Column(name="avatar")
-	private String avatar;
 	
 	@Column(name = "created_at")
 	
@@ -88,14 +80,13 @@ public class UserEntity {
 	
 	
 
-	public UserEntity(String username, String fullName, String phone, String fixe, String address,
+	public UserEntity(String username, String fullName, String phone, String address,
 			 String email, String password, String rawPassword) {
 		super();
 	
 		this.username = username;
 		this.fullName = fullName;
 		this.phone = phone;
-		this.fixe = fixe;
 		this.address = address;
 		this.email = email;
 		this.password = password;
@@ -163,14 +154,7 @@ public class UserEntity {
 		this.rawPassword = rawPassword;
 	}
 
-	public String getAvatar() {
-		return avatar;
-	}
-
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
-	}
-
+	
 	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
@@ -195,28 +179,12 @@ public class UserEntity {
 		this.phone = phone;
 	}
 
-	public String getFixe() {
-		return fixe;
-	}
-
-	public void setFixe(String fixe) {
-		this.fixe = fixe;
-	}
-
 	public String getAddress() {
 		return address;
 	}
 
 	public void setAddress(String address) {
 		this.address = address;
-	}
-
-	public boolean isHaveAvatar() {
-		return haveAvatar;
-	}
-
-	public void setHaveAvatar(boolean haveAvatar) {
-		this.haveAvatar = haveAvatar;
 	}
 
 	public boolean isEnable() {
