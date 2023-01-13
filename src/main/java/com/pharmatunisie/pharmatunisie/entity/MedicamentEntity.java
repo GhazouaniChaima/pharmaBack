@@ -14,7 +14,8 @@ public class MedicamentEntity {
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_med;
+	private Integer id;
+	
     private String nom_commercial;
     private String dci;
     private String dossage;
@@ -22,12 +23,7 @@ public class MedicamentEntity {
     private float prix;
     private String presentaion;
     
-	public int getId_med() {
-		return id_med;
-	}
-	public void setId_med(int id_med) {
-		this.id_med = id_med;
-	}
+
 	public String getNom_commercial() {
 		return nom_commercial;
 	}
@@ -69,20 +65,21 @@ public class MedicamentEntity {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 
 	public MedicamentEntity(String nom_commercial, String dci, String dossage, int nbre_stock, float prix,
 			String presentaion) {
 		super();
-		
 		this.nom_commercial = nom_commercial;
 		this.dci = dci;
+		this.dossage = dossage;
 		this.nbre_stock = nbre_stock;
 		this.prix = prix;
 		this.presentaion = presentaion;
 	}
 	@Override
 	public String toString() {
-		return "MedicamentEntity [id_med=" + id_med + ", nom_commercial=" + nom_commercial + ", dci=" + dci
+		return "MedicamentEntity [id_med=" + id + ", nom_commercial=" + nom_commercial + ", dci=" + dci
 				+ ", dossage=" + dossage + ", nbre_stock=" + nbre_stock + ", prix=" + prix + ", presentaion="
 				+ presentaion + "]";
 	}

@@ -2,7 +2,7 @@ package com.pharmatunisie.pharmatunisie.dto;
 
 public class MedicamentDto {
 	
-	private int id_med;
+	
     private String nom_commercial;
     private String dci;
     private String dossage;
@@ -10,12 +10,7 @@ public class MedicamentDto {
     private float prix;
     private String presentaion;
     
-	public int getId_med() {
-		return id_med;
-	}
-	public void setId_med(int id_med) {
-		this.id_med = id_med;
-	}
+
 	public String getNom_commercial() {
 		return nom_commercial;
 	}
@@ -56,10 +51,9 @@ public class MedicamentDto {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public MedicamentDto(int id_med, String nom_commercial, String dci, String dossage, int nbre_stock, float prix,
+	public MedicamentDto(String nom_commercial, String dci, String dossage, int nbre_stock, float prix,
 			String presentaion) {
 		super();
-		this.id_med = id_med;
 		this.nom_commercial = nom_commercial;
 		this.dci = dci;
 		this.dossage = dossage;
@@ -69,7 +63,7 @@ public class MedicamentDto {
 	}
 	@Override
 	public String toString() {
-		return "MedicamentDto [id_med=" + id_med + ", nom_commercial=" + nom_commercial + ", dci=" + dci + ", dossage="
+		return "MedicamentDto [ nom_commercial=" + nom_commercial + ", dci=" + dci + ", dossage="
 				+ dossage + ", nbre_stock=" + nbre_stock + ", prix=" + prix + ", presentaion=" + presentaion + "]";
 	}
     

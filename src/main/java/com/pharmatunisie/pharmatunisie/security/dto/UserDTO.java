@@ -22,20 +22,14 @@ public class UserDTO {
 	private String rawPassword;
 	
 	private String email;
-
-	private String avatar;
-
+	
 	@Size(min = 4, max=40, message = "Minimum full name length: 4 characters & Maximum 50 characters")
 	@NotNull(message = "full name must not be null")
 	private String fullName;
 
 	private String phone;
 
-	private String fixe;
-
 	private String address;
-
-	private boolean root;
 
 	//List<Role> roles;
 
@@ -71,13 +65,6 @@ public class UserDTO {
 		this.email = email;
 	}
 
-	public String getAvatar() {
-		return avatar;
-	}
-
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
-	}
 
 	/*public List<Role> getRoles() {
 		return roles;
@@ -103,13 +90,6 @@ public class UserDTO {
 		this.phone = phone;
 	}
 
-	public String getFixe() {
-		return fixe;
-	}
-
-	public void setFixe(String fixe) {
-		this.fixe = fixe;
-	}
 
 	public String getAddress() {
 		return address;
@@ -117,14 +97,6 @@ public class UserDTO {
 
 	public void setAddress(String address) {
 		this.address = address;
-	}
-
-	public boolean isRoot() {
-		return root;
-	}
-
-	public void setRoot(boolean root) {
-		this.root = root;
 	}
 
 	public String getTheme() {
@@ -163,21 +135,18 @@ public class UserDTO {
 
 	public UserDTO(Integer id,
 			@Size(min = 4, max = 255, message = "Minimum login length: 4 characters") @NotNull(message = "username must not be null") String username,
-			String password, String rawPassword, String email, String avatar,
+			String password, String rawPassword, String email, 
 			@Size(min = 4, max = 40, message = "Minimum full name length: 4 characters & Maximum 50 characters") @NotNull(message = "full name must not be null") String fullName,
-			String phone, String fixe, String address, boolean root, String theme, String token, boolean enable) {
+			String phone, String address, String theme, String token, boolean enable) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.rawPassword = rawPassword;
 		this.email = email;
-		this.avatar = avatar;
 		this.fullName = fullName;
 		this.phone = phone;
-		this.fixe = fixe;
 		this.address = address;
-		this.root = root;
 		this.theme = theme;
 		this.token = token;
 		this.enable = enable;

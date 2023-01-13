@@ -1,5 +1,6 @@
 package com.pharmatunisie.pharmatunisie.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.pharmatunisie.pharmatunisie.repository.MedicamentDao;
 import com.pharmatunisie.pharmatunisie.entity.MedicamentEntity;
@@ -8,9 +9,9 @@ import java.util.List;
 
 @Service
 public class MedicamentService implements Imedicament{
-private final MedicamentDao medicamentDao;
+private  MedicamentDao medicamentDao;
 
-	
+	@Autowired
 	public MedicamentService(MedicamentDao medicamentDao) {
 		super();
 		this.medicamentDao= medicamentDao;
